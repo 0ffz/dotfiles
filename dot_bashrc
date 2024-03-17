@@ -24,4 +24,16 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+# configure when in container
+
+if [ -f /run/.toolboxenv ]; then
+    source /run/.containerenv
+fi
+
+if [ -f $HOME/.config/env ]; then
+	source $HOME/.config/env
+fi
