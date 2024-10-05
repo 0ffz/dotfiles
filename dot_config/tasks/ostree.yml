@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# Taskfile.yml
+version: "3"
+tasks:
+  update:
+    desc: Update the system
+    cmd: rpm-ostree update
+  apply-live:
+    cmd: sudo rpm-ostree apply-live --allow-replacement
+  remove-deployments:
+    cmd: rpm-ostree cleanup --pending
+  pin:
+    cmd: sudo ostree admin pin 0

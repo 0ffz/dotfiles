@@ -1,0 +1,9 @@
+Host mineinabyss
+    HostName build.mineinabyss.com
+    User offz
+    Port 17072
+
+Host maple
+	HostName h.dvyy.me
+	User offz
+	Port 22

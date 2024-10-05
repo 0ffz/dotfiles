@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+tasks:
+  fish: { cmd: $EDITOR ~/.config/fish/config.fish }
+  bash: { cmd: $EDITOR ~/.bashrc }
+  env: { cmd: $EDITOR ~/.env }

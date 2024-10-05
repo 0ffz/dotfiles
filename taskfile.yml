@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+includes:
+  ostree:
+    taskfile: "~/.config/tasks/ostree.yml"
+  edit:
+    taskfile: "~/.config/tasks/edit.yml"
+  install:
+    taskfile: "~/.config/tasks/install.yml"
+tasks:
+  greet:
+    cmds:
+      - echo "Hello World"
+  test:
+    cmds:
+      - echo "Test"
