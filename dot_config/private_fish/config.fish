@@ -19,6 +19,7 @@ set SHELL /usr/bin/fish
 alias t "distrobox enter"
 alias d distrobox
 alias cm chezmoi
+alias cma "chezmoi apply"
 alias hm home-manager
 alias code "flatpak run com.visualstudio.code"
 alias assignments "~/projects/canvas-due-date-exporter/build/install/canvas-due-date-exporter/bin/canvas-due-date-exporter"

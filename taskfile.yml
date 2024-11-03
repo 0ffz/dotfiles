@@ -7,4 +7,6 @@ includes:
     taskfile: "~/.config/tasks/edit.yml"
   install:
     taskfile: "~/.config/tasks/install.yml"
-tasks: {}
+tasks:
+  pkg-search:
+    cmd: "nohup xdg-open 'https://search.nixos.org/packages' >/dev/null 2>&1"

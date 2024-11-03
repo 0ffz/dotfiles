@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# hash: {{ include "dot_config/distrobox/distrobox.ini" | sha256sum }}
+distrobox assemble create --replace --file ~/.config/distrobox/distrobox.ini
