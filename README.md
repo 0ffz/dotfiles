@@ -12,3 +12,9 @@ Dotfiles managed across my machines using chezmoi
 ```properties
 chezmoi init https://github.com/0ffz/dotfiles.git
 ```
+
+## System info
+
+- Currently running Fedora Silverblue with some layered packages for Docker
+- Brew for packages that don't need to be layered on the host OS
+- Appimages managed through `https://github.com/zyrouge/pho`

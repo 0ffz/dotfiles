@@ -4,3 +4,6 @@ tasks:
   fish: { cmd: $EDITOR ~/.config/fish/config.fish }
   bash: { cmd: $EDITOR ~/.bashrc }
   env: { cmd: $EDITOR ~/.env }
+  cm:
+    cmd: zed ~/.local/share/chezmoi
+    desc: Edit chezmoi config

@@ -12,23 +12,23 @@ function fish_greeting
     # do nothing
 end
 
-function envsource
-  for line in (cat $argv | grep -v '^#')
-    set item (string split -m 1 '=' $line)
-    set -gx $item[1] $item[2]
-    # echo "Exported key $item[1]"
-  end
-end
-
-if test -f ~/.env
-    envsource ~/.env
-end
-
 set EDITOR micro
 set SHELL /usr/bin/fish
 
 # Aliases
-alias t "toolbox enter"
+alias t "distrobox enter"
+alias d distrobox
+alias cm chezmoi
+alias hm home-manager
+alias code "flatpak run com.visualstudio.code"
+alias assignments "~/projects/canvas-due-date-exporter/build/install/canvas-due-date-exporter/bin/canvas-due-date-exporter"
+alias abyss "docker compose -f /opt/docker/data/minecraft/docker-compose.yml"
+alias abyss-edit "$EDITOR /opt/docker/data/minecraft/docker-compose.yml"
+# Define the main function
+
+if type -q eza
+    alias ll "eza -l"
+end
 
 # Path
 fish_add_path /var/home/offz/.local/bin

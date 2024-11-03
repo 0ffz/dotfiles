@@ -1,0 +1,9 @@
+[
+  {
+    "bindings": {
+      "alt-1": "workspace::ToggleLeftDock",
+      "alt-2": "workspace::ToggleBottomDock",
+      "alt-3": "workspace::ToggleRightDock"
+    }
+  }
+]

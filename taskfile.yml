@@ -7,10 +7,4 @@ includes:
     taskfile: "~/.config/tasks/edit.yml"
   install:
     taskfile: "~/.config/tasks/install.yml"
-tasks:
-  greet:
-    cmds:
-      - echo "Hello World"
-  test:
-    cmds:
-      - echo "Test"
+tasks: {}
