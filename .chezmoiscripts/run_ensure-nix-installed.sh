@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Check if nix is installed, if so return
-if command -v nix &> /dev/null
+# Check if /nix directory exists
+if [ -d "/nix" ]
 then
     exit
 fi
@@ -14,6 +14,10 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 # Fix sudo
 echo "Defaults  secure_path = /nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:$(sudo printenv PATH)" | sudo tee /etc/sudoers.d/nix-sudo-en
 
+# Source nix
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+
+# Setup home-manager https://julianhofer.eu/blog/01-silverblue-nix/
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
