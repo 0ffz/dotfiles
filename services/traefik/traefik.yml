@@ -1,0 +1,32 @@
+api:
+  dashboard: true
+providers:
+  docker:
+    exposedByDefault: false
+  # file:
+  # directory: conf.d
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      dnsChallenge:
+        provider: cloudflare
+      email: "dan.voznyy@gmail.com"
+      storage: "/acme_data/acme.json"
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+  websecure:
+    address: ":443"
+    http:
+      tls:
+        certResolver: letsencrypt
+        domains:
+          - main: "local.dvyy.me"
+            sans:
+              - "*.local.dvyy.me"

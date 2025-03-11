@@ -3,7 +3,15 @@
     "bindings": {
       "alt-1": "workspace::ToggleLeftDock",
       "alt-2": "workspace::ToggleBottomDock",
-      "alt-3": "workspace::ToggleRightDock"
+      "alt-3": "workspace::ToggleRightDock",
+      "ctrl-q": null,
+      "shift-escape": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-b": ["task::Spawn", { "task_name": "Compile latex" }]
     }
   }
 ]

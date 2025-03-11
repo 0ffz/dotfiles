@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Compile latex",
+    "command": "tectonic $ZED_FILE",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Chezmoi apply",
+    "command": "chezmoi apply"
+  },
+  {
+    "label": "Add to Chezmoi",
+    "command": "chezmoi add $ZED_FILE"
+  }
+]

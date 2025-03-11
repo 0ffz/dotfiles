@@ -22,9 +22,9 @@ alias cm chezmoi
 alias cma "chezmoi apply"
 alias hm home-manager
 alias code "flatpak run com.visualstudio.code"
-alias assignments "~/projects/canvas-due-date-exporter/build/install/canvas-due-date-exporter/bin/canvas-due-date-exporter"
-alias abyss "docker compose -f /opt/docker/data/minecraft/docker-compose.yml"
-alias abyss-edit "$EDITOR /opt/docker/data/minecraft/docker-compose.yml"
+# alias assignments "~/projects/canvas-due-date-exporter/build/install/canvas-due-date-exporter/bin/canvas-due-date-exporter"
+# alias abyss "docker compose -f /opt/docker/data/minecraft/docker-compose.yml"
+# alias abyss-edit "$EDITOR /opt/docker/data/minecraft/docker-compose.yml"
 # Define the main function
 
 if type -q eza
@@ -42,3 +42,8 @@ if type -q starship
     # source /run/.containerenv
 end
 
+function serv
+    set service_name $argv[1]
+    set -e argv[1]
+    docker compose -f ~/services/$service_name/docker-compose.yml $argv
+end

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# hash: {{ include "dot_config/services/docker-compose.yml" | sha256sum }}
-docker compose -f ~/.config/services/docker-compose.yml up -d
+# hash: {{ include "services/syncthing/docker-compose.yml" | sha256sum }}
+docker compose -f ~/services/syncthing/docker-compose.yml up -d

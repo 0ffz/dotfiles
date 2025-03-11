@@ -37,6 +37,5 @@ fi
 if [ -f $HOME/.config/env ]; then
 	source $HOME/.config/env
 fi
+. "/var/home/offz/.deno/env"
 
-export GRAALVM_HOME="/var/home/offz/.jdks/graalvm-jdk-22.0.2/"
-export JAVA_HOME="/var/home/offz/.jdks/graalvm-jdk-22.0.2/"

@@ -13,6 +13,7 @@
     bitwarden-cli
     lazydocker
     go-task
+    tectonic
   ];
 
   programs.git = {
