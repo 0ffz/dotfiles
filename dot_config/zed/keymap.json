@@ -5,6 +5,7 @@
       "alt-2": "workspace::ToggleBottomDock",
       "alt-3": "workspace::ToggleRightDock",
       "ctrl-q": null,
+      "ctrl-w": "pane::CloseActiveItem",
       "shift-escape": "workspace::ToggleBottomDock"
     }
   },
