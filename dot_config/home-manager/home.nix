@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  pkgs-unstable = import <nixpkgs-unstable> {};
+  # pkgs-unstable = import <nixpkgs-unstable> {};
 in
 {
   home.username = "offz";
@@ -18,18 +18,18 @@ in
     go-task
     tectonic
     fish
-    jetbrains-mono
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nerd-fonts.jetbrains-mono
     jetbrains-toolbox
     nixd
     nil
     graalvm-ce
     # Gnome extensions
-    gnomeExtensions.middle-click-to-close-in-overview
-    gnomeExtensions.just-perfection
-  ]) ++ (with pkgs-unstable; [
-  	zed-editor
+    # gnomeExtensions.middle-click-to-close-in-overview
+    # gnomeExtensions.just-perfection
   ]);
+# ++ (with pkgs-unstable; [
+  	# zed-editor
+  # ]);
 
   nixpkgs.config = {
       allowUnfree = true;
@@ -43,7 +43,6 @@ in
 
   home.sessionVariables = {
     EDITOR = "micro";
-    JDK_HOME = "/var/home/offz/.jdks/graalvm-jdk-22.0.2/";
   };
 
   # Let Home Manager install and manage itself.
@@ -65,7 +64,7 @@ in
     };
     # Set console font preference
     "org/gnome/Console" = {
-      custom-font = "Jetbrains Mono 12";
+      custom-font = "JetbrainsMono Nerd Font 12";
       use-system-font = false;
     };
     # Swap alt-tab to show window previews instead of icons

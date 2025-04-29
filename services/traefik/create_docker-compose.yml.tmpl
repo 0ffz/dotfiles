@@ -14,3 +14,6 @@ services:
       - "./acme_data:/acme_data/"
       - "./traefik.yml:/traefik.yml"
       # - "./conf.d:/conf.d"
+    # Proxy services using network mode host
+    extra_hosts:
+      - host.docker.internal:172.17.0.1

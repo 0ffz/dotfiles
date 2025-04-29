@@ -3,8 +3,6 @@ api:
 providers:
   docker:
     exposedByDefault: false
-  # file:
-  # directory: conf.d
 certificatesResolvers:
   letsencrypt:
     acme:
