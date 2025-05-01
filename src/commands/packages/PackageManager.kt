@@ -3,18 +3,21 @@ package commands.packages
 import co.touchlab.kermit.Logger
 
 interface PackageManager {
+    val name: String
+
     fun install(packages: List<String>)
 
     fun getInstalled(): List<String>
 
     fun installNecessary(packages: List<String>) {
-        Logger.i("Checking necessary packages...")
+        val logger = Logger.withTag(name)
+        logger.i("Checking necessary packages...")
         val needsInstall = packages - getInstalled().toSet()
         if (needsInstall.isEmpty()) {
-            Logger.i("All necessary packages are installed.")
+            logger.i("All necessary packages are installed")
             return
         }
-        Logger.i("Installing ${needsInstall.size} packages...")
+        logger.i("Installing ${needsInstall.size} packages...")
         install(needsInstall)
     }
 }

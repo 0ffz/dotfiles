@@ -5,6 +5,7 @@ import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.Context
 import commands.dconf.gsettings
 import commands.gitConfig
+import commands.packages.flatpak
 import commands.packages.pacman
 import commands.packages.rpmOstree
 import util.read
@@ -29,6 +30,8 @@ class Apply : CliktCommand() {
         gsettings.set(gsettingsEntries)
 
         gitConfig.putAll(read<Map<String, String>>("git"))
+
+        flatpak.installNecessary(read<List<String>>("flatpak"))
 
         Logger.i("Running chezmoi apply:")
         ProcessBuilder("chezmoi", "apply").inheritIO().start().waitFor()

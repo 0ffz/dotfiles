@@ -6,6 +6,7 @@ import kotlinx.serialization.json.Json
 val ShellScript.rpmOstree get() = RpmOstree(this)
 
 class RpmOstree(val shell: ShellScript) : PackageManager {
+    override val name = "ostree"
 
     override fun install(packages: List<String>) {
         shell.command("rpm-ostree", listOf("install") + packages)

@@ -10,3 +10,7 @@ fedora:
   - tailscale
 arch:
   - fish
+  - docker
+  - docker-compose
+  - flatpak
+  - tailscale
