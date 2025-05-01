@@ -8,7 +8,7 @@ class Pacman(val shell: ShellScript): PackageManager {
     override val name = "pacman"
 
     override fun install(packages: List<String>) {
-        shell.command("pacman", listOf("-S", "--noconfirm") + packages)
+        shell.command("sudo", listOf("pacman", "-S", "--noconfirm") + packages)
     }
 
     override fun getInstalled(): List<String> {
