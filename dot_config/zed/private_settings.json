@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "auto_install_extensions": {
+    "colored-zed-icons-theme": true,
+    "intellij-newui-theme": true
+  },
   "icon_theme": "Colored Zed Icons Theme Dark",
   "assistant": {
     "default_model": {

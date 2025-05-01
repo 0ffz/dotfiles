@@ -1,0 +1,17 @@
+org.gnome.desktop.interface:
+  color-scheme: "prefer-dark"
+  enable-hot-corners: true
+  clock-format: "12h"
+  text-scaling-factor: 1.25
+org.gnome.shell:
+  disable-user-extensions: false
+# Set console font preferences
+org.gnome.Ptyxis:
+  font-name: "JetbrainsMono Nerd Font 15"
+  use-system-font: false
+# Swap alt-tab to show window previews instead of icon
+org.gnome.desktop.wm.keybindings:
+  switch-applications: "[]"
+  switch-applications-backward: "[]"
+  switch-windows: "['<Alt>Tab']"
+  switch-windows-backward: "['<Shift><Alt>Tab']"

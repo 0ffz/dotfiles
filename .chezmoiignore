@@ -1,7 +1,11 @@
 README.md
+.editorconfig
+.systemconfig
+.gitignore
 amper
 amper.bat
-module.yaml
+build
 src
-.editorconfig
 nixos
+module.yaml
+chezmoi.iml

@@ -1,0 +1,12 @@
+fedora:
+  - ddcutil
+  - distrobox
+  - docker-buildx-plugin
+  - docker-ce
+  - docker-ce-cli
+  - docker-compose-plugin
+  - fish
+  - gnome-tweaks
+  - tailscale
+arch:
+  - fish
