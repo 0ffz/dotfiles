@@ -7,3 +7,4 @@ Host maple
 	HostName h.dvyy.me
 	User offz
 	Port 22
+  	SetEnv TERM=xterm-256color

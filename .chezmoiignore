@@ -2,8 +2,11 @@ README.md
 .editorconfig
 .systemconfig
 .gitignore
-amper
-amper.bat
+.gradle
+gradle
+build.gradle.kts
+settings.gradle.kts
+gradle.properties
 build
 src
 nixos

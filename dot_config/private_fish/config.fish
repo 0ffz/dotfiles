@@ -16,12 +16,13 @@ set EDITOR micro
 set SHELL /usr/bin/fish
 
 # Aliases
-alias t "distrobox enter"
+alias t "distrobox enter system"
 alias d distrobox
 alias cm chezmoi
 alias cma "chezmoi apply"
 alias hm home-manager
 alias code "flatpak run com.visualstudio.code"
+alias enter "nix-shell --command 'fish' -p "
 # alias assignments "~/projects/canvas-due-date-exporter/build/install/canvas-due-date-exporter/bin/canvas-due-date-exporter"
 # alias abyss "docker compose -f /opt/docker/data/minecraft/docker-compose.yml"
 # alias abyss-edit "$EDITOR /opt/docker/data/minecraft/docker-compose.yml"

@@ -7,7 +7,7 @@ Dotfiles managed across my machines using Kotlin and chezmoi.
 ```properties
 git clone https://github.com/0ffz/dotfiles.git ~/.local/share/chezmoi
 cd ~/local/share/chezmoi
-./amper run init
+./gradlew install
 ```
 
 ## System info
