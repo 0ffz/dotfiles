@@ -1,0 +1,16 @@
+Host mineinabyss
+    HostName build.mineinabyss.com
+    User offz
+    Port 17072
+
+Host maple
+	HostName h.dvyy.me
+	User offz
+	Port 22
+
+Host hetzner-box
+    User u331550-sub3
+    HostName u331550.your-storagebox.de
+    Port 23
+    IdentityFile ~/.ssh/id_hetzner_ed25519
+    StrictHostKeyChecking no

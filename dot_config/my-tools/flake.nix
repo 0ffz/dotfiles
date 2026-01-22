@@ -6,7 +6,8 @@
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       # "aarch64-linux"
@@ -17,20 +18,22 @@
     in
     {
       packages.${system}.default = pkgs.buildEnv {
-          name = "my-tools";
-          paths = with pkgs; [
-              starship
-              micro
-              eza
-              chezmoi
-              bitwarden-cli
-              lazydocker
-              tectonic
-              nixd
-              nil
-              # intelli-shell
-            ];
-          };
-          formatter.${system} = pkgs.nixpkgs-fmt;
+        name = "my-tools";
+        paths = with pkgs; [
+          starship
+          fish
+          micro
+          eza
+          chezmoi
+          bitwarden-cli
+          lazydocker
+          tectonic
+          nixd
+          nil
+          nerd-fonts.jetbrains-mono
+          # intelli-shell
+        ];
+      };
+      formatter.${system} = pkgs.nixpkgs-fmt;
     };
 }

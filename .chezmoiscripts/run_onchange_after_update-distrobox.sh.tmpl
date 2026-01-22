@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! command -v distrobox >/dev/null 2>&1; then
+echo "distrobox: command not found. Skipping assemble." >&2
+exit 0
+fi
 
 # hash: {{ include "dot_config/distrobox/distrobox.ini" | sha256sum }}
 distrobox assemble create --replace --file ~/.config/distrobox/distrobox.ini
